@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class ContainerScreen extends StatelessWidget {
+
   const ContainerScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     final double size = 120.0;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Container & Decoration'),
+        title: const Text('Container Screen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -18,7 +20,6 @@ class ContainerScreen extends StatelessWidget {
           spacing: 16,
           runSpacing: 16,
           children: [
-            // Простой контейнер с фоном
             Container(
               width: size,
               height: size,
@@ -35,11 +36,11 @@ class ContainerScreen extends StatelessWidget {
               ),
               alignment: Alignment.center,
               child: const Text(
-                'Box 1',
+                'Простой контейнер',
                 style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
               ),
             ),
-            // Контейнер с градиентом
             Container(
               width: size,
               height: size,
@@ -52,30 +53,11 @@ class ContainerScreen extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(14)),
               ),
               alignment: Alignment.center,
-              child: const Text('Gradient'),
-            ),
-            // Контейнер с трансформацией
-            Transform.rotate(
-              angle: 0.9,
-              child: Container(
-                width: size,
-                height: size,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 6,
-                      offset: Offset(3, 6),
-                    ),
-                  ],
-                ),
-                alignment: Alignment.center,
-                child: const Text('Rotated'),
+              child: const Text(
+                'Контейнер с градиентом',
+                textAlign: TextAlign.center,
               ),
             ),
-            // Контейнер с границами и внутренним отступом
             Container(
               width: size,
               height: size,
@@ -86,7 +68,10 @@ class ContainerScreen extends StatelessWidget {
                 color: Colors.white,
               ),
               alignment: Alignment.center,
-              child: const Text('Bordered'),
+              child: const Text(
+                'Контейнер с границами',
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
