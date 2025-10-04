@@ -7,7 +7,7 @@ class RowScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Row Demo'),
+        title: const Text('Row Screen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
