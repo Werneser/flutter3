@@ -6,7 +6,7 @@ class TextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Text Виджет')),
+      appBar: AppBar(title: Text('Text Screen')),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

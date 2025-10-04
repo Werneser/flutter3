@@ -31,8 +31,8 @@ class PaddingScreen extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Padding(
-            padding: EdgeInsets.only(top: 4.0, bottom: 4.0),
-            child: Text('Padding с промежутками.'),
+            padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
+            child: Text('Padding с отдалением.'),
           ),
         ],
       ),
