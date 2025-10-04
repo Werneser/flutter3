@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'ButtonScreen.dart';
+import 'ContainerScreen.dart';
 import 'PaddingScreen.dart';
 import 'TextScreen.dart';
 
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     TextScreen(),
     ButtonScreen(),
     PaddingScreen(),
-    //ContainerScreen(),
+    ContainerScreen(),
     //RowScreen(),
   ];
 
