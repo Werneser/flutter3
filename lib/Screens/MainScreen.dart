@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'ButtonScreen.dart';
+import 'PaddingScreen.dart';
 import 'TextScreen.dart';
 
 
@@ -16,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     TextScreen(),
     ButtonScreen(),
-    //PaddingScreen(),
+    PaddingScreen(),
     //ContainerScreen(),
     //RowScreen(),
   ];
