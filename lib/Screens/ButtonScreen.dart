@@ -16,11 +16,17 @@ class _ButtonScreenState extends State<ButtonScreen> {
     });
   }
 
+  void _reset() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // Общий стиль кнопок можно вынести в переменную, если нужно.
     return Scaffold(
-      appBar: AppBar(title: Text('ButtonScreen с тремя кнопками')),
+      appBar: AppBar(title: Text('Button Виджет')),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -29,8 +35,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
             ElevatedButton(
               onPressed: () => _increment(1),
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue, // фон кнопки
-                onPrimary: Colors.white, // цвет текста
+                foregroundColor: Colors.white, backgroundColor: Colors.blue, // цвет текста
               ),
               child: Text('Первая кнопка (+1)'),
             ),
@@ -40,8 +45,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
             OutlinedButton(
               onPressed: () => _increment(2),
               style: OutlinedButton.styleFrom(
-                primary: Colors.deepPurple, // цвет текста
-                side: BorderSide(color: Colors.deepPurple, width: 2),
+                foregroundColor: Colors.deepPurple, side: BorderSide(color: Colors.deepPurple, width: 2),
               ),
               child: Text('Вторая кнопка (+2)'),
             ),
@@ -51,12 +55,20 @@ class _ButtonScreenState extends State<ButtonScreen> {
             ElevatedButton(
               onPressed: () => _increment(3),
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange, // фон
-                onPrimary: Colors.black, // текст
+                foregroundColor: Colors.black, backgroundColor: Colors.orange, // текст
                 elevation: 8.0, // тень
                 shadowColor: Colors.black54,
               ),
               child: Text('Третья кнопка (+3)'),
+            ),
+            SizedBox(height: 32),
+
+            ElevatedButton(
+              onPressed: _reset,
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white, backgroundColor: Colors.grey, // текст
+              ),
+              child: Text('Сбросить счетчик'),
             ),
             SizedBox(height: 32),
 
