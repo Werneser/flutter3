@@ -32,6 +32,10 @@ class RowScreen extends StatelessWidget {
                 ElevatedButton(onPressed: null, child: Text('Btn 1')),
                 ElevatedButton(onPressed: null, child: Text('Btn 2')),
                 ElevatedButton(onPressed: null, child: Text('Btn 3')),
+                Text(
+                  'В этой строке для примера размещено несколько кнопок',
+                  style: TextStyle(fontSize: 16),
+                )
               ],
             ),
             const SizedBox(height: 12),
@@ -39,11 +43,12 @@ class RowScreen extends StatelessWidget {
               children: const [
                 Expanded(
                   child: Text(
-                    'Расширяемая зона с текстом, чтобы увидеть поведение Row и Expanded.',
+                    'Расширяемая зона с текстом, чтобы увидеть поведение Row с Expanded.',
                     style: TextStyle(fontSize: 14),
+
                   ),
                 ),
-                Icon(Icons.arrow_forward_ios, size: 16),
+                Icon(Icons.arrow_forward_ios, size: 28),
               ],
             ),
           ],
