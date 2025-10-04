@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'ButtonScreen.dart';
 import 'ContainerScreen.dart';
 import 'PaddingScreen.dart';
+import 'RowScreen.dart';
 import 'TextScreen.dart';
 
 
@@ -20,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     ButtonScreen(),
     PaddingScreen(),
     ContainerScreen(),
-    //RowScreen(),
+    RowScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -41,10 +42,10 @@ class _MainScreenState extends State<MainScreen> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.text_fields), label: 'Text'),
-          BottomNavigationBarItem(icon: Icon(Icons.touch_app), label: 'Layout'),
-          BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: 'Buttons'),
-          BottomNavigationBarItem(icon: Icon(Icons.credit_card), label: 'Card'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Stateful'),
+          BottomNavigationBarItem(icon: Icon(Icons.touch_app), label: 'Buttons'),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: 'Paddin'),
+          BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: 'Containers'),
+          BottomNavigationBarItem(icon: Icon(Icons.ad_units_outlined), label: 'Row'),
         ],
       ),
     );
